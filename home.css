@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Star Jedi";
+    src: url("starjedi/Starjedi.ttf") format('truetype'),
+         url("starjedi/Starjhol.ttf") format('truetype');
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cabin', sans-serif;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title:hover {
+    color: red;
+}
+
+.a-card-title:hover {
+    text-decoration: none;
+}

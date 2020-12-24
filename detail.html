@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="./loader.css">
+  <link href="./detail_p_styles.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="./images/logo/favicon.png" />
+  <title>TheBigCityShoes</title>
+</head>
+
+<body id="product-info">
+  <!-- Page Preloder -->
+  <div id="preloader">
+    <div class="loader">
+      <img src="./images/loading.gif" alt="loading">
+    </div>
+  </div>
+  <header id="header" class="header">
+    <div class="navigation">
+      <div class="container">
+        <nav class="navigate">
+          <div class="nav__logo">
+            <a href="index.html" class="scroll-link" style="font-family:'Star Jedi'">
+              THEBiGCiTYSHoeS
+            </a>
+          </div>
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="Nam.html" class="nav__link">NAM</a>
+                <ul class="hover__header">
+                  <li><a href="#">Sản phẩm mới</a></li>
+                  <li><a href="#">Tranning & Running</a></li>
+                  <li><a href="#">Sneaker</a></li>
+                  <li><a href="#">Sandal</a></li>
+                  <li><a href="#">Boots</a></li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="Nữ.html" class="nav__link">NỮ</a>
+                <ul class="hover__header">
+                  <li><a href="#">Sản phẩm mới</a></li>
+                  <li><a href="#">Giày thể thao</a></li>
+                  <li><a href="#">Giày cao gót</a></li>
+                  <li><a href="#">Giày búp bê</a></li>
+                  <li><a href="#">Sandal</a></li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="Trẻ em.html" class="nav__link">TRẺ EM</a>
+                <ul class="hover__header">
+                  <li><a href="#">Sản phẩm mới</a></li>
+                  <li><a href="#">Sandal</a></li>
+                  <li><a href="#">Dép</a></li>
+                  <li><a href="#">Giày tập đi</a></li>
+
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="Phụ kiện.html" class="nav__link">PHỤ KIỆN</a>
+                <ul class="hover__header">
+                  <li><a href="#">Sản phẩm mới</a></li>
+                  <li><a href="#">Cap</a></li>
+                  <li><a href="#">Socks</a></li>
+                  <li><a href="#">Tee</a></li>
+
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="Sales.html" class="nav__link">SALES</a>
+              </li>
+              <li class="nav__item">
+                <a href="Blog/Blog1.html" target="_blank" class="nav__link">BLOG</a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="container search">
+            <div class="searchbox">
+              <input type="text" maxlength="25" class="search__input" placeholder="Search..." />
+              <i class="fas fa-search icon__search"></i>
+            </div>
+          </div>
+          <div class="nav__icons">
+            <a href="./login/Login.html" class="icon__item">
+              <i class="fas fa-user"></i>
+            </a>
+            <a href="./login/Cart.html" class="icon__item">
+              <i class="fas fa-shopping-cart" id="cart__icon"></i>
+              <span id="cart__total">0</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="page__title-area">
+      <div class="container">
+        <div class="page__title-container">
+          <ul class="page__titles">
+            <li>
+              <a href="index.html">
+                <i class="fas fa-home"></i>
+              </a>
+            </li>
+            <li class="page__title"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <!-- Products Details -->
+      <section class="section product-details__section">
+        <div class="product-detail__container">
+          <div class="product-detail__left">
+            <div class="details__container--left">
+              <div class="product__pictures">
+              </div>
+              <div class="product__picture" id="product__picture">
+                <!-- <div class="rect" id="rect"></div> -->
+                <div class="picture__container">
+                  <img id="expandedImg" />
+                </div>
+              </div>
+              <div class="zoom" id="zoom"></div>
+            </div>
+
+
+          </div>
+
+          <div class="product-detail__right">
+            <div class="product-detail__content">
+              <h3></h3>
+              <li class="sku_p" style="list-style: none; margin-bottom: 1.5rem; margin-top: -1rem;">
+                <span>Mã sản phẩm:</span>
+                <span style="font-weight: bold; font-size: 1.7rem;" class="sku"></span>
+              </li>
+              <div class="price">
+                <span>Giá:</span>
+                <span class="new__price"></span>
+              </div>
+              <div class="product__info-container">
+                <ul class="product__info">
+                  <li class="select">
+
+                  </li>
+                  <li>
+
+                    <div class="input-counter">
+                      <span>Số lượng:</span>
+                      <div>
+                        <div class="input-counter">
+                          <span class="minus-btn" onselectstart="return false">
+                            <a href="#" class="minus_plus">-</a>
+                          </span>
+                          <div>
+                            <input id="product_qty" type="text" value="1" class="counter-btn" readonly>
+                          </div>
+                          <span class="plus-btn" onselectstart="return false">
+                            <a href="#" class="minus_plus">+</a>
+                          </span>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div class="input-counter">
+                          <span>Size:</span>
+                          <div>
+                            <span class="minus-btn">
+                              <a href="#" class="minus_plus">-</a>
+                            </span>
+                            <input id="product_size" type="text" value="40" class="counter-btn" readonly>
+                            <span class="plus-btn" onselectstart="return false">
+                              <a href="#" class="minus_plus">+</a>
+                            </span>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+
+
+                  <li>
+                    <span>Thương hiệu:</span>
+                    <a>The Big City Shoes</a>
+                  </li>
+                  <li>
+                    <span class="product-color">Màu sản phẩm:</span>
+                    <a></a>
+                  </li>
+                  <li>
+                    <span>Tình trạng:</span>
+                    <a class="in-stock"></a>
+                  </li>
+                </ul>
+                <div class="product-details__btn">
+                  <a id="add_cart" class="add" style="cursor: pointer;">
+                    <span>
+                      <i class="fas fa-cart-plus"></i>
+                    </span>
+                    THÊM VÀO GIỎ HÀNG
+                  </a>
+                  <a class="buy" href="./login/Cart.html">
+                    <span>
+                      <i class="far fa-credit-card"></i>
+                    </span>
+                    THANH TOÁN NGAY
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-detail__bottom">
+          <div class="title__container tabs">
+            <div class="section__titles category__titles ">
+              <div class="section__title detail-btn active" data-id="description">
+                <span class="dot"></span>
+                <h1 class="primary__title">Mô tả</h1>
+              </div>
+            </div>
+            <div class="section__titles">
+              <div class="section__title detail-btn" data-id="shipping">
+                <span class="dot"></span>
+                <h1 class="primary__title">Chi tiết Shipping</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail__content">
+            <div class="content active" id="description">
+              <p>
+                Mô tả sản phẩm là bản sao tiếp thị giải thích sản phẩm là gì và tại sao nó đáng mua. Mục đích của mô tả
+                sản phẩm là cung cấp cho khách hàng thông tin quan trọng về các tính năng và lợi ích của sản phẩm để họ
+                buộc phải mua.
+              </p>
+              <h2>Mô tả sản phẩm bán</h2>
+              <ul>
+                <li>Tập trung vào người mua lý tưởng của bạn</li>
+                <li>Lôi kéo với lợi ích</li>
+                <li>Tránh các cụm từ yeah, yeah</li>
+                <li>Căn đều bằng cách sử dụng so sánh nhất</li>
+              </ul>
+              <h2>Mô tả dữ liệu sản phẩm bán</h2>
+              <ol>
+                <li>Thu hút trí tưởng tượng của độc giả</li>
+                <li>Vượt qua rào cản hợp lý bằng những câu chuyện nhỏ</li>
+                <li>Dụ dỗ bằng những lời lẽ cảm tính</li>
+                <li>Cám dỗ với bằng chứng xã hội</li>
+              </ol>
+              <h2>Đôi nét về The big city shoes</h2>
+              <p>
+                The big city shoes là trang web xịn xò nhất mà mọi người có thể xem. <b>Trang web bán giày số 1 trong
+                  tương lai!</b>
+              </p>
+            </div>
+
+            <div class="content" id="shipping">
+              <h3>Chính sách trả hàng</h3>
+              <p>
+                Bạn có thể trả lại hầu hết các mặt hàng mới, chưa mở trong vòng 30 ngày kể từ ngày giao hàng để được
+                hoàn tiền đầy đủ. Chúng tôi cũng sẽ trả tiền
+                chi phí vận chuyển trả lại nếu việc trả lại là do lỗi của chúng tôi (bạn nhận được hàng không chính xác
+                hoặc bị lỗi
+                mục, v.v.).
+              </p>
+              <p>
+                Bạn sẽ nhận được tiền hoàn lại trong vòng bốn tuần kể từ khi đưa gói hàng của bạn để trả lại
+                người gửi hàng, tuy nhiên, trong nhiều trường hợp, bạn sẽ nhận được tiền hoàn lại nhanh chóng hơn.
+                Khoảng thời gian này bao gồm
+                thời gian vận chuyển để chúng tôi nhận lại hàng của bạn từ người gửi hàng (5 đến 10 ngày làm việc), thời
+                gian
+                chúng tôi sẽ xử lý đơn trả lại của bạn khi chúng tôi nhận được (3 đến 5 ngày làm việc) và thời gian ngân
+                hàng của bạn
+                xử lý yêu cầu hoàn tiền của chúng tôi (5 đến 10 ngày làm việc).
+              </p>
+              <p>
+                Nếu bạn cần trả lại một mặt hàng, chỉ cần đăng nhập vào tài khoản của bạn, xem đơn đặt hàng bằng cách sử
+                dụng nút 'Hoàn thành
+                Liên kết của đơn đặt hàng trong menu Tài khoản của tôi và nhấp vào nút Trả lại (các) mặt hàng. Chúng tôi
+                sẽ thông báo cho bạn qua
+                e-mail về khoản tiền hoàn lại của bạn sau khi chúng tôi đã nhận và xử lý hàng trả lại.
+              </p>
+              <h3>Shipping</h3>
+              <p>
+                Chúng tôi có thể gửi đến hầu hết mọi địa chỉ trên thế giới. Lưu ý rằng có những hạn chế đối với một số
+                sản phẩm,
+                và một số sản phẩm không thể vận chuyển đến các điểm đến quốc tế.
+              </p>
+              <p>
+                Khi bạn đặt hàng, chúng tôi sẽ ước tính ngày vận chuyển và giao hàng cho bạn dựa trên
+                tính sẵn có của các mặt hàng của bạn và các tùy chọn vận chuyển bạn chọn. Tùy thuộc vào nhà cung cấp vận
+                chuyển mà bạn
+                chọn, ước tính ngày vận chuyển có thể xuất hiện trên trang báo giá vận chuyển.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Products -->
+      <section class="section related__products">
+        <div class="title__container">
+          <div class="section__title filter-btn active">
+            <span class=" dot"></span>
+            <h1 class="primary__title">Related Products</h1>
+          </div>
+        </div>
+        <div id="related__p" class="row mb-4">
+        </div>
+      </section>
+      <!-- Latest Products -->
+      <section class="section latest__products">
+        <div class="title__container">
+          <div class="section__title filter-btn active">
+            <span class="dot"></span>
+            <h1 class="primary__title">Latest Products</h1>
+          </div>
+        </div>
+        <div id="lasted__p" class="row mb-4">
+        </div>
+      </section>
+    </div>
+  </main>
+  <a href="#header" class="goto-top scroll-link">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div id="logo" class="footer-top__box">
+          <img src="./images/logo/d.png" />
+        </div>
+        <div class="footer-top__box">
+          <h3>HỖ TRỢ</h3>
+          <a href="#">bigcityshoes.web1@gmail.com</a>
+          <a href="#">0973-908-413</a>
+        </div>
+        <div class="footer-top__box">
+          <h3>THÔNG TIN</h3>
+          <a href="#">Điều khoản</a>
+          <a href="#">Liên hệ với chúng tôi</a>
+          <a href="#">Giao & Đổi trả hàng </a>
+          <a href="#">FAQs</a>
+        </div>
+        <div class="footer-top__box">
+          <h3>THEO DÕI</h3>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Youtube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" class="goto-top scroll-link">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="./js/products.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
