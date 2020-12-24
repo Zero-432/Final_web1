@@ -24,8 +24,8 @@ Reset
 
 @font-face {
   font-family: "Star Jedi";
-  src: url("starjedi/Starjedi.ttf") format('truetype'),
-       url("starjedi/Starjhol.ttf") format('truetype');
+  src: url("../starjedi/Starjedi.ttf") format('truetype'),
+       url("../starjedi/Starjhol.ttf") format('truetype');
 }
 
 * {
